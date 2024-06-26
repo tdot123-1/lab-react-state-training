@@ -9,4 +9,26 @@ import diceSix from "../assets/images/dice6.png"
 
 const Dice = () => {
 
+    const [die, setDie] = useState(diceOne);
+
+    const diceArr = [diceOne, diceTwo, diceThree, diceFour, diceFive, diceSix];
+
+    const rollDice = () => {
+
+        // set state to empty dice
+        setDie(diceEmpty);
+
+        // change state to random die after timeout
+        setTimeout(() => {
+            setDie(diceArr[Math.floor(Math.random() * diceArr.length)]); 
+        }, 1000)
+    }
+
+    return (
+       <div className="img-div">
+        <img src={die} onClick={rollDice} />
+       </div> 
+    );
 }
+
+export default Dice;
