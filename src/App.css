@@ -40,3 +40,10 @@
     max-width: 50%;
 }
 
+.disco-btn {
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 10px;
+}
+
